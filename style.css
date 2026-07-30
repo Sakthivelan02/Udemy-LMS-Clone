@@ -1,0 +1,360 @@
+/* ===========================
+   RESET
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gabarito", sans-serif;
+}
+
+body {
+    background: #fff;
+    color: #222;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar__s1__title {
+    color: #a435f0;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.navbar__s2 {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    border: 1px solid #000;
+    border-radius: 30px;
+    padding: 10px 15px;
+}
+
+.navbar__s2 input {
+    width: 100%;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    font-size: 16px;
+    background: transparent;
+}
+
+.navbar__s3 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.navbar__s3 p,
+.navbar__s3 i {
+    transition: 0.3s;
+}
+
+.navbar__s3 p:hover,
+.navbar__s3 i:hover {
+    color: #a435f0;
+}
+
+/* ===========================
+   MY LEARNING POPUP
+=========================== */
+.mylearning {
+    position: relative;
+}
+
+.mylearning__popup {
+    position: absolute;
+    top: 110%;
+    right: 0;
+    width: 220px;
+    background: #fff;
+    border-radius: 6px;
+    padding: 15px;
+    display: none;
+}
+
+.mylearning:hover .mylearning__popup {
+    display: block;
+}
+
+/* ===========================
+   CATEGORIES
+=========================== */
+.categories {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.categories p {
+    background: #a435f0;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.categories p:hover {
+    background: #7b2cbf;
+}
+
+/* ===========================
+   SALE IMAGE
+=========================== */
+.sale-images {
+    position: relative;
+    margin: 20px 0;
+}
+
+.sale-images img {
+    width: 100%;
+    display: block;
+}
+
+.sale-offer {
+    position: absolute;
+    top: 20%;
+    left: 8%;
+    background: rgba(0,0,0,.55);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+}
+
+.sale-offer h2 {
+    margin-bottom: 10px;
+}
+
+/* ===========================
+   RECOMMENDED
+=========================== */
+.recommended {
+    padding: 40px;
+}
+
+.recommended h2 {
+    margin-bottom: 10px;
+}
+
+.recommended > p {
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.recommended-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* ===========================
+   COURSE CARD
+=========================== */
+.course-card {
+    width: 23%;
+    min-width: 220px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+.course-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.course-card p {
+    margin-top: 8px;
+}
+
+.course-card p:first-of-type {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* ===========================
+   TOPICS
+=========================== */
+.topics {
+    padding: 40px;
+}
+
+.topics_title {
+    margin-bottom: 20px;
+}
+
+.topics_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.topics_container p {
+    border: 1px solid black;
+    padding: 12px;
+    flex: 1 1 200px;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.topics_container p:hover {
+    background: #a435f0;
+    color: white;
+}
+
+/* ===========================
+   POPULAR
+=========================== */
+.popular {
+    padding: 40px;
+}
+
+.popular_title {
+    margin-bottom: 10px;
+}
+
+.popular > p {
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.popular_container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.popular_container .course-card {
+    width: 23%;
+    min-width: 220px;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+.footer {
+    background: #111;
+    color: white;
+    padding: 40px;
+}
+
+.footer_one {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 20px;
+}
+
+.footer_one p {
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.footer_one p:hover {
+    color: #a435f0;
+}
+
+.footer_two {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.footer_two h2 {
+    color: #a435f0;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width:768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar__s2 {
+        width: 100%;
+    }
+
+    .recommended-container,
+    .popular_container {
+        justify-content: center;
+    }
+
+    .course-card {
+        width: 45%;
+    }
+
+    .sale-offer {
+        position: static;
+        max-width: 100%;
+        margin: 20px;
+    }
+
+    .footer_one,
+    .footer_two {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width:480px) {
+
+    .course-card {
+        width: 100%;
+    }
+
+    .navbar__s3 {
+        gap: 12px;
+        font-size: 16px;
+    }
+
+    .recommended,
+    .popular,
+    .topics {
+        padding: 20px;
+    }
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .navbar__s1__title {
+        font-size: 28px;
+    }
+
+    .sale-offer {
+        padding: 15px;
+    }
+}
